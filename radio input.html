@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+    <body> 
+        <input id="r1" name="g1" type="radio" value="Male">Male</input>
+        <br> 
+        <input id="r2" name="g1" type="radio" value="Female">Female</input>
+        <br>
+        <button onclick="check()">Click Me</button> 
+    </body>
+</html>
+<script>
+    function check()
+    {
+        var r1 = document.getElementById("r1"); 
+        var r2 = document.getElementById("r2");
+
+        if(r1.checked==true) 
+            alert(r1.value); 
+        else if(r2.checked=true) 
+            alert(r2.value);
+        else
+            alert("Nothing selected");
+    }
+</script>

@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+    <body> 
+        <select id="selectbox"> 
+            <option value="First">First</option> 
+            <option value="Second">Second</option>
+            <option value="Third">Third</option> 
+        </select> 
+        <br>
+        <button onclick="check()">Click Me</button> 
+    </body>
+</html>
+
+<script type="text/javascript"> 
+    // DOM manipulations & getelementbyId method 7 
+    function check()
+    {
+        var select = document.getElementById("selectbox"); 
+        alert(select.options[select.selectedIndex].value);
+    }        
+</script>

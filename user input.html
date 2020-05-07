@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+
+    <body>
+    <p>AJAy</p>
+    Name : <input id="name" placeholder="Enter your name"><br><br>
+    <!-- simple login page -->
+    Username : <input id="user" placeholder="Enter your username"><br><br>
+    Password : <input id="pass" placeholder="Enter your Password"><br><br>
+    <button onclick="check()">SAVE</button>
+    </body>
+</html>
+    <script type="text/javascript">
+        /*
+        function print(){
+            // var str=document.getElementById("name").value;
+            // alert(str);
+
+            alert(document.getElementById("name").value);
+        }
+        */
+
+        // simple login
+       function check()
+       {
+           if (document.getElementById("user").value=="ajay" & document.getElementById("pass").value=="singh")
+           {
+            alert("Log-in");
+           }
+           else{
+            alert("Wrong Ussername and Password");
+           }
+       }
+    </script>

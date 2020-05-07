@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+    <body class="home"> 
+        <div>
+            <p >This is paragraph 1</p> 
+            <p>This is paragraph 2</p> 
+            <p>This is paragraph 3</p> 
+            <p>This is paragraph 4</p> 
+            <p>This is paragraph 5</p>
+        </div>
+        <button onclick="dark()">DARK mode by getElementsByTagName</button>
+        <br><br>
+        <button onclick="darkc()">DARK mode by getElementsByclassName</button>
+    </body>
+</html>
+
+<script type="text/javascript">
+    //DOM manipulation & getelementbyTagName 
+     
+    function dark()
+    {
+        var para = document.getElementsByTagName("div"); 
+        // para[0].style.fontSize = 88;
+        for(var i=0;i<para.length; i++)
+        {   
+            para[i].style.backgroundColor="black";
+            para[i].style.color="white";
+            // para[i].style.fontSize =40;
+        }
+    }
+    function darkc()
+    {
+        var parac = document.getElementsByClassName("home"); 
+        // parac[0].style.fontSize = 88;
+        for(var i=0;i<parac.length; i++)
+        {   
+            parac[i].style.backgroundColor="black";
+            parac[i].style.color="white";
+            // para[i].style.fontSize =40;
+        }
+    }
+
+</script>    

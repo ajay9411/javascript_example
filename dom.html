@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+
+    <body>
+    <p>AJAy</p>
+    <h2 id="name">Name is </h2> 
+    <!-- <button onclick="print()" >Click me</button> -->
+    <button onmouseover="print()" onmouseout="del()" >Show name</button>
+    
+    </body>
+</html>
+    <script type="text/javascript">
+    
+    //Document object model
+    function print(){
+        document.getElementById("name").innerHTML="Name is AJAY PRATAP SINGH";
+        // alert("AJAY PRATAP SINGH")
+    }
+    
+    function del(){
+        document.getElementById("name").innerHTML="Name is";
+    }
+
+        
+        
+    </script>
