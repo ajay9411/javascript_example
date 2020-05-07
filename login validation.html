@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+
+    <body>
+        <p>AJAy</p>
+    
+        <form onsubmit="return validate();" action="taget page .html"> 
+            <input id="uname" placeholder="Username" type="text" /> 
+            <br><br> 
+            <input id="pass" placeholder="Password" type="password" /> 
+            <br>
+            <p id="error"></p>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
+   
+<script type="text/javascript">
+    function validate() 
+    {
+        var uname = document.getElementById("uname"); 
+        var password =document.getElementById("pass");
+
+        if(uname.value.trim() =="")
+        {   
+            document.getElementById("error").innerHTML="Invalid username";
+            uname.style.border = "solid 3px red"; 
+            return false;
+        }    
+        else if (password.value.trim() == "")
+        {
+            document.getElementById("error").innerHTML="Invalid Password";
+            pass.style.border = "solid 3px red"; 
+            return false;
+        }
+        /*else if(password.value.trim().length<5) 
+        {
+            document.getElementById("error").innerHTML="Password too short";
+            password.style.border = "solid 3px red"; 
+            return false;
+        }*/
+        else if (uname.value=="ajay" & password.value=="singh")
+        {
+            return true;
+        }
+        else
+        {
+            document.getElementById("error").innerHTML="Wrong Ussername and Password";
+            return false;
+        }
+    }   
+</script>

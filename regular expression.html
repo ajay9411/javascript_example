@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+
+    <body>
+        <p>AJAy</p>
+        <form action="#">
+            <input id="uname" placeholder="Username" type="text" />
+            <br>
+            <label id="luser" style="color: red;visibility: hidden"></label>
+            <br>
+            <button onclick="validate()">Check username</button>
+            <br>
+            
+            <br>
+            <input id="mob" placeholder="Mobile" type="text" />
+            <br> 
+            <label id="lmob" style="color: red;visibility: hidden"></label>
+            <br>
+            <button onclick="validatemob()">Check mobile</button>
+            <br>
+
+            <br>
+            <input id="email" placeholder="Email" type="text" />
+            <br> 
+            <label id="lmail" style="color: red;visibility: hidden"></label>
+            <br>
+            <button onclick="validatemail()">Check Email</button>
+        </form>
+    </body>
+</html>
+   
+<script type="text/javascript">
+    /* 
+    \d - match any digit (equal to [0-9]) 
+    \W - match any word character (a-z, A-Z, 0-9 & _) 
+    \s - match whitespace character (eg - spaces & tabs) 
+    \t - match a tab only
+    i for  case senstive,g for global search
+    ^ use to exclude if written inside [ ]
+    ^ use to set start point if written outside [ ]
+    $ use to set end point
+    */
+    //username
+    function validate() 
+    {
+        var username = document.getElementById("uname").value; 
+    
+        // var regx =/scse/i;  
+        var regx=/[^a-z][1][0-9]SCSE/i;
+        if(regx.test(username))
+        {
+            document.getElementById("luser").innerHTML="Valid username";
+            document.getElementById("luser").style.visibility="visible";
+            // alert("Valid Username");
+        }    
+        else
+        {
+            document.getElementById("luser").innerHTML="Invalid username";
+            document.getElementById("luser").style.visibility="visible";
+        }
+    }
+    //mobile number
+    function validatemob() 
+    {
+        var mobile = document.getElementById("mob").value; 
+        var regm=/^[6-9]\d{9}$/;
+    
+        if(regm.test(mobile))
+        {
+            document.getElementById("lmob").innerHTML="Valid mobile number";
+            document.getElementById("lmob").style.visibility="visible";
+        }    
+        else
+        {
+            document.getElementById("lmob").innerHTML="Invalid mobile number";
+            document.getElementById("lmob").style.visibility="visible";
+        }
+    } 
+    //email
+    function validatemail() 
+    {
+        var email = document.getElementById("email").value; 
+        var rege=/^([a-zA-z0-9\.-]+)@([a-zA-z0-9-]+).([a-z]{2,10})(.[a-z]{2,10})?$/;      
+                                                // () use to group 
+                                                // . {if written without \} use wildcard(inplace of . anything can we enter eg. a.b ==a@b or anb)
+                                                // {2,10} use to give range no. of element
+                                                // + is used to set range acc. to input  
+                                                // ? is used for optional  part
+        if(rege.test(email))
+        {
+            document.getElementById("lmail").innerHTML="Valid Email";
+            document.getElementById("lmail").style.visibility="visible";
+        }    
+        else
+        {
+            document.getElementById("lmail").innerHTML="Invalid Email";
+            document.getElementById("lmail").style.visibility="visible";
+        }
+    } 
+</script>
