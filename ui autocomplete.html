@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Hello</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h1>Autocomplete</h1>
+        <div class="mydiv">
+            <label>Enter city name : </label>
+            <input type="text" id="citybox">
+        </div>
+        
+    </body>
+    
+</html>
+<script src="js/jquery.js"> </script>
+<script src="jqueryui/jquery-ui.js"> </script>
+<script>
+    var mycities =["Mumbai", "New Delhi", "Panjim", "Pune", "Mysore", "Indore", "New York", "Los Angeles", "Manhattan","Tokyo", "New Jersey"];
+    $("#citybox").autocomplete({source: mycities},{
+        autoFocus:true,
+        delay:400,
+        minLength:2
+    });
+</script>

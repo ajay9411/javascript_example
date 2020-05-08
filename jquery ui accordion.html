@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Hello</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h1>Accordion</h1>
+
+        <div id="panels">
+            <h3>First</h3> 
+            <p>This is First section</p>
+
+            
+            <h3>Second</h3> 
+            <p> This is Second section<br>
+                This is Second section<br>
+                This is Second section<br>
+                This is Second section<br>
+                This is Second section<br>
+                This is Second section<br>
+            </p>
+            
+
+            
+            <h3>Third</h3> 
+            <p>This is Third section</p>
+            
+            <h3>Fourth</h3> 
+            <p>This is Fourth section</p>
+
+        </div>
+    </body>
+    
+</html>
+<script src="js/jquery.js"> </script>
+<script src="jqueryui/jquery-ui.js"> </script>
+<script>
+    $("#panels").accordion({
+        collapsible:true,
+        event:"mouseover",
+        animate:250,
+        active:0,
+        heightStyle:true,
+        icons:{header:"ui-icon-plus",activeHeader:"ui-icon-minus"}
+    });
+</script>
