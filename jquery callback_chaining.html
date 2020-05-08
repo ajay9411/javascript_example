@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Hello</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <button id="btn1">Toggle</button>
+        <button id="btn2">Toggle Animation</button>
+    
+        <div id="firstdiv" class="mydiv"> 
+            <p>This is first paragraph in first division</p> 
+            <p>This is second paragraph in first division</p> 
+        </div> 
+        <div id="seconddiv" class="mydiv"> 
+            <p>This is third paragraph in second division</p> 
+        </div>
+        
+        
+    </body>
+    
+</html>
+
+    <script src="js/jquery.js"> </script>
+
+<script>
+    $(document).ready(function()
+    {   
+        $("#btn1").click(function()
+        { 
+            $("#firstdiv").slideToggle(1500,function(){
+                alert("hidden");
+            });
+        });
+        
+        $("#btn2").click(function()
+        { 
+            $("#seconddiv").slideUp(1500).slideDown(1500).fadeOut(1500).fadeIn(1500);
+        });
+    });    
+</script>

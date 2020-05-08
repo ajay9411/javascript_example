@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Hello</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <button id="btn1">addClass</button>
+        <button id="btn2">removeClass</button>
+        <button id="btn3">toggleClass</button>
+        
+        <div id="firstdiv" class="mydiv"> 
+            <p id="first">This is first <strong>paragraph</strong> in first division</p> 
+        </div> 
+        
+    </body>
+    
+</html>
+
+<script src="js/jquery.js"> </script>
+
+<script>
+    /*
+    addClass() - Add one or more classes to the selected elements 
+    removeClass() - Removes one or more classes from the selected elements 
+    toggleClass() - Toggle between adding/removing classes from the selected elements 
+    Css() - Sets or returns the style attribute
+    */
+
+    $(document).ready(function()
+    {   
+        $("#btn1").click(function()
+        { 
+            $("#firstdiv").addClass("newmydiv"); 
+        });
+
+        $("#btn2").click(function()
+        { 
+            $("#firstdiv").removeClass("newmydiv"); 
+        });
+
+        
+        $("#btn3").click(function()
+        { 
+            $("#firstdiv").toggleClass("newmydiv"); 
+        });
+        
+        
+    });    
+</script>

@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Hello</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <button id="btn1">Action</button>
+    
+        <div id="firstdiv" class="mydiv"> 
+            <p id="first">This is first <strong>paragraph</strong> in first division</p> 
+            <p id="second">This is second paragraph in first division</p> 
+        </div> 
+    </body>
+    
+</html>
+
+<script src="js/jquery.js"> </script>
+
+<script>
+    $(document).ready(function()
+    {   
+        $("#btn1").click(function()
+        { 
+            // alert($("#first").text());
+            
+            // var text=$("#first").text();
+            // alert(text);
+
+            // $("#first").text("AJAY PRATAP SINGH");
+
+            // alert($("#first").html());      //to show html code also
+
+            // $("#first").html("<i>AJAY PRATAP SINGH</i>");
+
+            // alert($("#firstdiv").attr("class"));         //to get name of attribute
+
+            // alert($(".mydiv").css("border")); 
+
+            $(".mydiv").css("font-size","25px"); 
+        });
+    });    
+</script>
