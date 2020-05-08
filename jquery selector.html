@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Hello</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        
+        <p>This is first paragraph</p> 
+        <p>This is second paragraph</p> 
+    
+        <div id="firstdiv" class="mydiv"> 
+            <p>This is first paragraph in first division</p> 
+            <p>This is second paragraph in first division</p> 
+        </div> 
+        <div id="seconddiv" class="mydiv"> 
+            <p>This is third paragraph in second division</p> 
+        </div>
+        <div id="thirddiv" class="mydiv"> 
+            <ul>  
+                <li>List item 1</li> 
+                <li>List item 2</li> 
+                <li>List item 3</li> 
+                <li>List item 4</li>
+            </ul>
+        </div>
+        <button onclick="fn1()" id="btn2">ALL FADE IN/OUT</button>
+        <button onclick="fn2()" id="btn2">SELECTED FADE IN/OUT</button>
+    </body>
+    
+</html>
+
+    <script src="js/jquery.js"> </script>
+
+<script>
+        // $("h1").fadeToggle(500);    //Select all with h1 tag
+        // $("#name").fadeToggle(500);   //To select with id use #
+        // $(".myname").fadeToggle(500);   //To select with class use . 
+    
+    function fn1()
+    {
+        $("div").fadeToggle(500);   
+    }
+    function fn2()
+    {
+        // $("#firstdiv,#seconddiv").fadeToggle(500);   
+        // $("#firstdiv,p").fadeToggle(500);   
+        // $("div p").fadeToggle(500);   
+        // $("p:first").fadeToggle(500);   
+        // $("p:odd").fadeToggle(500);   
+        $("p:even").fadeToggle(500);   
+    }
+</script>

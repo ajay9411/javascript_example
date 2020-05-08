@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+    <body>
+        <p>AJAy</p>
+        
+        <button onclick="start()" id="add">Start</button>
+        <h2 id="name">NAME :</h2>
+        <p>Printing after 4 seconds</p>
+
+        <h2 id="timer">Timer : 0 seconds </h2>
+        <p>Press stop button to stop Printing</p>
+        <button onclick="stop()" id="stop">Stop</button> </body>
+    </body>
+</html>
+
+<script type="text/javascript">
+    /*
+    setTimeout() allows you to execute statements ONCE after an interval
+    clearTimeout() method clears a timer set with the setTimeout() method
+    setInterval() allows you to execute statements REPEATEDLY after an interva
+    clearInterval() method clears a timer set with the setInterval() method.           
+    */
+    /*
+    var t=0;
+    function print()
+    {
+        document.getElementById("name").innerHTML="NAME : AJAY PRATAP SINGH";
+    }
+    function start()
+    {
+        t=window.setTimeout(print,4000);
+    }
+    function stop()
+    {
+        window.clearTimeout(t);
+    }
+    */
+    //setInterval   and clearInterval
+    
+    var t=0;
+    var sec=0;
+    function print()
+    {
+        document.getElementById("timer").innerHTML="Timer : "+sec+" seconds";
+        sec++;
+    }
+    function start()
+    {
+        t=window.setInterval(print,1000);
+    }
+    function stop()
+    {
+        window.clearInterval(t);
+    }
+</script>
+
+
+

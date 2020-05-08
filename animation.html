@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+    <body>
+        <p>AJAy</p>
+        <h1 id="name" >AJAY PRATAP SINGH</h1>
+        <img id="img" src="img/logo.png" width=400px>
+        <br>
+        <button onclick="fadeIn()">Fade in</button>
+        <button onclick="fadeOut()"> Fade Out</button>
+
+        
+    </body>
+</html>
+<script type="text/javascript"> 
+    var opacity =0; 
+    var interval=0;
+    function fade()
+    {
+        var name = document.getElementById("name");
+        var img = document.getElementById("img");
+        opacity = Number(window.getComputedStyle(name).getPropertyValue("opacity"));
+        if(opacity>0)
+        {
+            opacity=opacity-0.1;
+            
+            img.style.opacity=opacity;
+            name.style.opacity=opacity;
+        }
+        else
+        {
+            clearInterval(interval);
+            //opacity=opacity+0.9;
+            //name.style.opacity=opacity;
+        }
+    }
+
+    function show()
+    {
+        var name = document.getElementById("name");
+        var img = document.getElementById("img");
+        opacity = Number(window.getComputedStyle(name).getPropertyValue("opacity"));
+        if(opacity < 1)
+        {
+            opacity=opacity+0.1;
+            name.style.opacity=opacity;
+            img.style.opacity=opacity;
+        }
+        else
+        {
+            clearInterval(interval);
+        }
+    }
+
+    function fadeIn()
+    {
+        interval = setInterval(show,100);
+    }
+    function fadeOut()
+    {
+        interval = setInterval(fade,100);
+    }
+
+</script>

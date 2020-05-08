@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+    <body>
+        <p>AJAy</p>
+        <img id="img" onmouseout="zoomOut()"" onmouseover="zoomIn()" src="img/logo.png" width=150px>
+    </body>
+</html>
+
+<script type="text/javascript"> 
+    var width =150; 
+    var differ=2;
+    interval=0;
+
+    function iin()
+    {
+        
+       if(width<350)
+       {
+           width=width+differ;
+           document.getElementById("img").style.width=width;
+       }
+       else
+       {
+           clearInterval(interval);
+       }
+    }
+
+    function out()
+    {
+        if(width>150)
+       {
+           width=width-differ;
+           document.getElementById("img").style.width=width;
+       }
+       else
+       {
+           clearInterval(interval);
+       } 
+    }
+
+    function zoomIn()
+    {   
+        clearInterval(interval);
+        interval = setInterval(iin,5);
+    }
+    function zoomOut()
+    {   
+        clearInterval(interval);
+        interval = setInterval(out,5);
+    }
+
+</script>

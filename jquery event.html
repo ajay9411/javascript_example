@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Hello</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <button id="btn1">ALL FADE IN/OUT</button>
+        <button  id="btn2">SELECTED FADE IN/OUT</button>
+        <p>This is first paragraph</p> 
+        <p>This is second paragraph</p> 
+    
+        <div id="firstdiv" class="mydiv"> 
+            <p>This is first paragraph in first division</p> 
+            <p>This is second paragraph in first division</p> 
+        </div> 
+        <div id="seconddiv" class="mydiv"> 
+            <p>This is third paragraph in second division</p> 
+        </div>
+        <div id="thirddiv" class="mydiv"> 
+            <ul>  
+                <li>List item 1</li> 
+                <li>List item 2</li> 
+                <li>List item 3</li> 
+                <li>List item 4</li>
+            </ul>
+        </div>
+        
+    </body>
+    
+</html>
+
+    <script src="js/jquery.js"> </script>
+
+<script>
+    $(document).ready(function()
+    {
+        /*
+        $("#btn1").click(fn1);
+        function fn1()
+        {
+            $("div").fadeToggle(500);   
+        }
+        $("#btn2").dblclick(fn2);
+        function fn2()
+        {
+        
+            $("p:even").fadeToggle(500);   
+        }*/
+
+        /*
+        $("#btn1").mouseenter(fn1);
+        $("#btn1").mouseleave(fn2);
+        function fn1()
+        {
+            $("div").fadeToggle(500);   
+        }
+        
+        function fn2()
+        {
+        
+            $("div").fadeToggle(500);   
+        }
+        */
+
+        $("#btn1").hover(fn1,fn2);
+        function fn1()
+        {
+            $("div").fadeToggle(500);   
+        }
+        function fn2()
+        {
+        
+            $("div").fadeToggle(500);   
+        }
+
+    });
+</script>
