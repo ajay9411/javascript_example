@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Hello</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h1>Dragable</h1>
+        <div style="border: 1px solid blue;">
+            <div class="cube1">
+                <h3>First</h3>
+            </div>
+            <div class="cube1">
+                <h3>Second</h3>
+            </div>
+        </div>
+        
+    </body>
+    
+</html>
+<script src="js/jquery.js"> </script>
+<script src="jqueryui/jquery-ui.js"> </script>
+<script>
+    $(".cube1").draggable({
+        // axis :"y",       //to allow drag only on y axis
+        // axis :"x",       //to allow drag only on x axis
+        // containment:"parent",        //to allow drag only in div
+        containment:"document",         //to allow drag only in page window
+        cursor:"grabbing",          //to change cursor
+        opacity:0.6,
+        // grid:[150,150]           //to set grid to allow drag
+        snap:true,              //to make element stick to eachother when close
+        snapTolerance:20,       //min. distance to stick
+    });
+</script>

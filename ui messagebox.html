@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Hello</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h1>Dragable</h1>
+        <div style="border: 1px solid blue;">
+            <center><h3>Click to view logo of car</h3>
+            <button id="btn">Click</button>
+        </div>
+        <div style="border: 1px solid blue;" class="logo">
+            <center><h3>Logo of car</h3>
+            <img src="img/logo.png" width=200px>
+        </div>
+        
+    </body>
+    
+</html>
+<script src="js/jquery.js"> </script>
+<script src="jqueryui/jquery-ui.js"> </script>
+<script>
+    
+    $("#btn").click(function(){
+        $(".logo").dialog({
+            title:"Logo",
+            draggable:true,
+            resizeable:true,
+            // height:250,
+            // width:250,
+            modal:true,
+            buttons:[
+                {
+                    text:"close",
+                    icon:"ui-icon-heart",
+                    click: function(){
+                        $(this).dialog("close");
+                    }
+                },
+                {
+                    text:"ok",
+                    icon:"ui-icon-heart",
+                    click: function(){
+                        $(this).dialog("close");
+                    }
+                },
+            ]
+        });
+    });
+</script>

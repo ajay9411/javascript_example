@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Hello</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h1>Click to modifiy</h1>
+        <button id="btn">Change</button>
+        <div class="mydiv1" >
+            <h2>Calender</h2>
+            <!-- <input type="date" id="citybox"> -->
+        </div>
+
+        <div id="panels" style="width:58%">
+            <h3>First</h3> 
+            <p>This is First section</p>
+
+            <h3>Second</h3> 
+            <p> This is Second section<br>
+                This is Second section<br>
+                This is Second section<br>
+                This is Second section<br>
+                This is Second section<br>
+                This is Second section<br>
+            </p>
+
+            <h3>Third</h3> 
+            <p>This is Third section</p>
+
+            <h3>Fourth</h3> 
+            <p>This is Fourth section</p>
+
+        </div>
+
+        <div style="border: 1px solid blue;" class="logo">
+            <center><h3>Logo of car</h3>
+            <img src="img/logo.png" width=200px>
+        </div>
+        
+    </body>
+    
+</html>
+<script src="js/jquery.js"> </script>
+<script src="jqueryui/jquery-ui.js"> </script>
+<script>
+    $(".mydiv1").datepicker({
+        numberOfMonths:1,
+        changeYear:true,
+        changeMonth:true,
+        showWeek:true,
+        weekHeader:"Week",
+        showOtherMonths:true,
+        minDate:new Date(2015,0,1),
+        maxDate:new Date(2025,11,31) 
+    });
+
+    $("#panels").accordion({
+        collapsible:true,
+        event:"mouseover",
+        animate:250,
+        active:0,
+        heightStyle:true,
+        icons:{header:"ui-icon-plus",activeHeader:"ui-icon-minus"}
+    });
+
+    $(".logo").dialog({
+            title:"Logo",
+            width:200,
+            draggable:true,
+    });
+
+    $("#btn").click(function(){
+        var height = $( ".logo" ).dialog( "option", "width" );
+        $(".logo" ).dialog( "option", "width", 250 );
+        $(".logo" ).dialog( "option", "draggable", false );
+        $(".mydiv1" ).datepicker( "option", "numberOfMonths", 2 );
+    });
+</script>

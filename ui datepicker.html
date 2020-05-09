@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Hello</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h1>Date picker</h1>
+        <div class="mydiv">
+            <h2>Calender</h2>
+            <!-- <input type="date" id="citybox"> -->
+        </div>
+        
+    </body>
+    
+</html>
+<script src="js/jquery.js"> </script>
+<script src="jqueryui/jquery-ui.js"> </script>
+<script>
+    $(".mydiv").datepicker({
+        numberOfMonths:1,
+        changeYear:true,
+        changeMonth:true,
+        showWeek:true,
+        weekHeader:"Week",
+        showOtherMonths:true,
+        minDate:new Date(2015,0,1),
+        maxDate:new Date(2025,11,31) 
+    });
+</script>
